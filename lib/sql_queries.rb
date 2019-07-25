@@ -21,7 +21,7 @@ GROUP BY users.name ORDER BY users.name ASC;
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-"SELECTS projects.title, 
+"SELECT projects.title, 
 SUM(pledges.amount) - projects.funding_goal FROM projects
 INNER JOIN pledges ON pledges.project_id = projects.id
 GROUP BY projects.title 
