@@ -12,11 +12,11 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
 end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
-"SELECT user.name, user.age,
+"SELECT users.name, users.age,
 SUM(pledges.amount) 
 FROM pledges 
 INNER JOIN users ON pledges.users_id = user.id 
-GROUP BY users.name ORDER BY user.name ASC
+GROUP BY users.name ORDER BY users.name ASC
 "
 end
 
